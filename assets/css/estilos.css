@@ -1,0 +1,22 @@
+body{
+    background-color: coral;
+}
+.painel{
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    margin-top: 100px;
+}
+.linfocito{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+.virus{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
