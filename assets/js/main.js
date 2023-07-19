@@ -9,12 +9,13 @@ let HEIGHT = 400; //altura do painel
 
 function desenhar(){
     ctx.beginPath()
+    ctx.fillStyle = 'violet'
     ctx.arc(x, y, 10, 0, Math.PI*2, true)
     ctx.fill()
 }
 function limparTela(){
-    ctx.fillStyle = 'purple' //background do circulo
-    ctx.strokeStyle = 'black' //cor da borda
+    ctx.fillStyle = '#f06889' //background do circulo
+    ctx.strokeStyle = '#f06889' //cor da borda
     ctx.beginPath()
     ctx.rect(0, 0, WIDTH, HEIGHT)
     ctx.closePath()
@@ -48,3 +49,6 @@ function iniciar(){
 }
 window.addEventListener('keydown', keyDown,true)
 iniciar()
+
+/*Base de estudo
+linha de código - introdução ao canvas*/
