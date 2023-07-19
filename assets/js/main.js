@@ -9,7 +9,7 @@ let HEIGHT = 400; //altura do painel
 
 function desenhar(){
     ctx.beginPath()
-    ctx.arch(x, y, 10, 0, Math.PI*2, true)
+    ctx.arc(x, y, 10, 0, Math.PI*2, true)
     ctx.fill()
 }
 function limparTela(){
@@ -24,16 +24,16 @@ function limparTela(){
 function keyDown(e){ //definindo o começo da movimentação
     switch(e.keyCode){
         case 38: //seta para cima
-        if(y - dy > 0){ y -= dy;}
+        if(y - dy > 0) y -= dy;
         break;
         case 40: //seta para baixo
-        if(y + dy < HEIGHT){ y += dy;}
+        if(y + dy < HEIGHT) y += dy;
         break;
         case 37: //seta para esquerda
-        if(x - dx > 0){ x -= dx;}
+        if(x - dx > 0) x -= dx;
         break;
         case 39: //seta para direita
-        if(x + dx < WIDTH){ x += dx;}
+        if(x + dx < WIDTH) x += dx;
         break;
     }
 }
@@ -42,8 +42,8 @@ function atualizar(){
     desenhar()
 }
 function iniciar(){
-    canvas = document.getElementById('canvas')
-    ctx = canvas.getContext('2d')
+    canvas = document.getElementById("canvas")
+    ctx = canvas.getContext("2d")
     return setInterval(atualizar, 10)
 }
 window.addEventListener('keydown', keyDown,true)
